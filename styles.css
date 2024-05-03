@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: #709ff5;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+.pokemon-card{
+   
+    font-size: 1.7rem;
+
+}
