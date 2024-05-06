@@ -39,9 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
    
 
-// obtener el anterior
-//
-//
+
 // obtener el siguiente
 
 document.getElementById('previous-btn')
@@ -49,9 +47,9 @@ document.getElementById('previous-btn')
         const storedId = localStorage.getItem('currentPokeId');
         if (storedId) {
             const pokemon = JSON.parse(storedId); 
-            const newId = Math.max(1, storedId -1);
+            const newId = Math.max(1, pokemon -1);
             const previousPokemon = await fetchPokemon(newId);
-            localStorage.setItem('currentPokeId', JSON.stringify(previousPokemon));
+            localStorage.setItem('currentPokeId', JSON.stringify(previousPokemon.id));
             PokemonCard(previousPokemon);
         }
     });
